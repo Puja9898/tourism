@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelGuide - Explore Your Next Adventure</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header Styles */
+        
+        header {
+            background-color: #047857;
+            color: white;
+            padding: 15px 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #10b981;
+        }
+        /* Hero Section */
+        
+        .hero {
+            background: linear-gradient(135deg, #047857, #10b981);
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .search-container {
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .search-input {
+            flex-grow: 1;
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+        
+        .search-button {
+            padding: 15px 30px;
+            background-color: #10b981;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .search-button:hover {
+            background-color: #059669;
+        }
+        /* Destinations Section */
+        
+        .destinations {
+            background-color: white;
+            padding: 50px 0;
+        }
+        
+        .destinations h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .destination-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .destination-card {
+            background-color: #f9fafb;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .destination-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .destination-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .destination-card-content {
+            padding: 15px;
+        }
+        /* Reviews Section */
+        
+        .reviews {
+            background-color: #f4f4f4;
+            padding: 50px 0;
+        }
+        
+        .reviews h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .review-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .review-stars {
+            color: #fbbf24;
+            margin-top: 10px;
+        }
+        /* Footer */
+        
+        footer {
+            background-color: #1f2937;
+            color: white;
+            padding: 30px 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 15px;
+        }
+        
+        .footer-section a {
+            color: #9ca3af;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content,
+            .footer-content {
+                flex-direction: column;
+                grid-template-columns: 1fr;
+            }
+            .search-container {
+                flex-direction: column;
+            }
+            .search-input,
+            .search-button {
+                width: 100%;
+                border-radius: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">TravelGuide</div>
+            <nav>
+                <a href="#">Hotels</a>
+                <a href="#">Things to Do</a>
+                <a href="#">Restaurants</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Explore Your Next Adventure</h1>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Where do you want to go?">
+                <button class="search-button">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="destinations container">
+        <h2>Popular Destinations</h2>
+        <div class="destination-grid">
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&auto=format&fit=crop" alt="Paris">
+                <div class="destination-card-content">
+                    <h3>Paris</h3>
+                    <p>France</p>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&auto=format&fit=crop" alt="Bali">
+                <div class="destination-card-content">
+                    <h3>Bali</h3>
+                    <p>Indonesia</p>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&auto=format&fit=crop" alt="New York">
+                <div class="destination-card-content">
+                    <h3>New York</h3>
+                    <p>United States</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews container">
+        <h2>Traveler Reviews</h2>
+        <div class="review-grid">
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&auto=format&fit=crop" alt="Sarah" class="review-avatar">
+                    <div>
+                        <strong>Sarah Johnson</strong>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p>"Amazing experience at the Eiffel Tower! The skip-the-line tour was worth every penny."</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop" alt="Mike" class="review-avatar">
+                    <div>
+                        <strong>Mike Anderson</strong>
+                        <div class="review-stars">★★★★☆</div>
+                    </div>
+                </div>
+                <p>"The monkey forest was incredible! Our guide was very knowledgeable and friendly."</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&auto=format&fit=crop" alt="Emily" class="review-avatar">
+                    <div>
+                        <strong>Emily Chen</strong>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p>"The bike tour through Central Park was the highlight of our NYC trip!"</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>About TravelGuide</h3>
+                <a href="#">About Us</a>
+                <a href="#">Press</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="footer-section">
+                <h3>Explore</h3>
+                <a href="#">Write a Review</a>
+                <a href="#">Add a Place</a>
+                <a href="#">Join</a>
+            </div>
+            <div class="footer-section">
+                <h3>Business</h3>
+                <a href="#">Business Solutions</a>
+                <a href="#">Advertise with Us</a>
+                <a href="#">Partner Program</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Search functionality
+        const searchInput = document.querySelector('.search-input');
+        const searchButton = document.querySelector('.search-button');
+
+        searchButton.addEventListener('click', () => {
+            const searchTerm = searchInput.value.trim();
+            if (searchTerm) {
+                alert(Searching
+                    for destinations in: $ {
+                        searchTerm
+                    });
+                searchInput.value = '';
+            }
+        });
+
+        // Allow search on Enter key press
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                searchButton.click();
+            }
+        });
+    </script>
+</body>
+
+</html>
