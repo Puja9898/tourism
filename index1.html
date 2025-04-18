@@ -2,36 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TravelGuide - Explore Your Next Adventure</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Discover amazing travel destinations, hotels, activities, and restaurants. Your ultimate guide to unforgettable adventures around the world.">
-    <meta name="keywords" content="travel, tourism, hotels, activities, restaurants, vacation, destinations">
-    <meta name="author" content="TravelGuide Team">
-    
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="TravelGuide - Explore Your Next Adventure">
-    <meta property="og:description" content="Discover amazing travel destinations, hotels, activities, and restaurants. Your ultimate guide to unforgettable adventures around the world.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.travelguide.com">
-    <meta property="og:image" content="https://example.com/travelguide-og-image.jpg">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TravelGuide - Explore Your Next Adventure">
-    <meta name="twitter:description" content="Discover amazing travel destinations, hotels, activities, and restaurants. Your ultimate guide to unforgettable adventures around the world.">
-    <meta name="twitter:image" content="https://example.com/travelguide-twitter-image.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://example.com/travelguide-favicon.png">
-    
-    <!-- Preload Critical Assets -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" as="style">
-    
-    <!-- External Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    
     <style>
         * {
             margin: 0;
@@ -53,41 +25,31 @@
 
         /* Header Styles */
         header {
-            background: linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+            background-color: #047857;
             color: white;
             padding: 15px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
         }
 
         .logo {
             font-size: 24px;
             font-weight: bold;
-            color: white;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
 
         nav a {
-            color: rgba(255,255,255,0.9);
+            color: white;
             text-decoration: none;
             margin-left: 15px;
-            transition: color 0.3s, transform 0.2s;
-            padding: 5px 10px;
-            border-radius: 4px;
+            transition: color 0.3s;
         }
 
         nav a:hover {
-            color: white;
-            background-color: rgba(255,255,255,0.2);
-            transform: scale(1.05);
+            color: #10b981;
         }
 
         /* Hero Section */
@@ -255,63 +217,6 @@
                 border-radius: 5px;
             }
         }
-
-        /* Navigation Styles */
-        .section {
-            padding: 80px 0;
-            display: none; /* Hide all sections by default */
-        }
-
-        .section.active {
-            display: block; /* Show active section */
-        }
-
-        /* Card Styles for Hotels, Activities, and Restaurants */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px 0;
-        }
-
-        .card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .card-content {
-            padding: 15px;
-        }
-
-        .card-price {
-            color: #047857;
-            font-weight: bold;
-        }
-
-        .card-button {
-            background: #047857;
-            color: white;
-            padding: 8px 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            float: right;
-        }
-
-        /* Section Headers */
-        .section-header {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #047857;
-        }
     </style>
 </head>
 <body>
@@ -319,221 +224,82 @@
         <div class="container header-content">
             <div class="logo">TravelGuide</div>
             <nav>
-                <a href="#home" class="nav-link" data-section="home">Home</a>
-                <a href="#hotels" class="nav-link" data-section="hotels">Hotels</a>
-                <a href="#things-to-do" class="nav-link" data-section="things-to-do">Things to Do</a>
-                <a href="#restaurants" class="nav-link" data-section="restaurants">Restaurants</a>
+                <a href="#">Hotels</a>
+                <a href="#">Things to Do</a>
+                <a href="#">Restaurants</a>
             </nav>
         </div>
     </header>
 
-    <!-- Home Section -->
-    <section id="home" class="section active">
-        <section class="hero">
-            <div class="container">
-                <h1>Explore Your Next Adventure</h1>
-                <div class="search-container">
-                    <input type="text" class="search-input" placeholder="Where do you want to go?">
-                    <button class="search-button">Search</button>
-                </div>
+    <section class="hero">
+        <div class="container">
+            <h1>Explore Your Next Adventure</h1>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Where do you want to go?">
+                <button class="search-button">Search</button>
             </div>
-        </section>
-
-        <section class="destinations container">
-            <h2>Popular Destinations</h2>
-            <div class="destination-grid">
-                <div class="destination-card">
-                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&auto=format&fit=crop" alt="Paris">
-                    <div class="destination-card-content">
-                        <h3>Paris</h3>
-                        <p>France</p>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&auto=format&fit=crop" alt="Bali">
-                    <div class="destination-card-content">
-                        <h3>Bali</h3>
-                        <p>Indonesia</p>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&auto=format&fit=crop" alt="New York">
-                    <div class="destination-card-content">
-                        <h3>New York</h3>
-                        <p>United States</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="reviews container">
-            <h2>Traveler Reviews</h2>
-            <div class="review-grid">
-                <div class="review-card">
-                    <div class="review-header">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&auto=format&fit=crop" alt="Sarah" class="review-avatar">
-                        <div>
-                            <strong>Sarah Johnson</strong>
-                            <div class="review-stars">★★★★★</div>
-                        </div>
-                    </div>
-                    <p>"Amazing experience at the Eiffel Tower! The skip-the-line tour was worth every penny."</p>
-                </div>
-                <div class="review-card">
-                    <div class="review-header">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop" alt="Mike" class="review-avatar">
-                        <div>
-                            <strong>Mike Anderson</strong>
-                            <div class="review-stars">★★★★☆</div>
-                        </div>
-                    </div>
-                    <p>"The monkey forest was incredible! Our guide was very knowledgeable and friendly."</p>
-                </div>
-                <div class="review-card">
-                    <div class="review-header">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&auto=format&fit=crop" alt="Emily" class="review-avatar">
-                        <div>
-                            <strong>Emily Chen</strong>
-                            <div class="review-stars">★★★★★</div>
-                        </div>
-                    </div>
-                    <p>"The bike tour through Central Park was the highlight of our NYC trip!"</p>
-                </div>
-            </div>
-        </section>
+        </div>
     </section>
 
-    <!-- Hotels Section -->
-    <section id="hotels" class="section">
-        <div class="container">
-            <h2 class="section-header">Popular Hotels</h2>
-            <div class="card-grid">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&auto=format&fit=crop" alt="Ritz-Carlton">
-                    <div class="card-content">
-                        <h3>The Ritz-Carlton</h3>
-                        <p>Paris, France</p>
-                        <p>Luxury hotel with stunning views of the Eiffel Tower</p>
-                        <div style="margin-top: 15px">
-                            <span class="card-price">$500/night</span>
-                            <button class="card-button">Book Now</button>
-                        </div>
-                    </div>
+    <section class="destinations container">
+        <h2>Popular Destinations</h2>
+        <div class="destination-grid">
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&auto=format&fit=crop" alt="Paris">
+                <div class="destination-card-content">
+                    <h3>Paris</h3>
+                    <p>France</p>
                 </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop" alt="Bali Resort">
-                    <div class="card-content">
-                        <h3>Bali Resort & Spa</h3>
-                        <p>Ubud, Bali</p>
-                        <p>Peaceful retreat surrounded by rice terraces</p>
-                        <div style="margin-top: 15px">
-                            <span class="card-price">$300/night</span>
-                            <button class="card-button">Book Now</button>
-                        </div>
-                    </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&auto=format&fit=crop" alt="Bali">
+                <div class="destination-card-content">
+                    <h3>Bali</h3>
+                    <p>Indonesia</p>
                 </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&auto=format&fit=crop" alt="Plaza Hotel">
-                    <div class="card-content">
-                        <h3>Plaza Hotel</h3>
-                        <p>New York, USA</p>
-                        <p>Historic luxury hotel in the heart of Manhattan</p>
-                        <div style="margin-top: 15px">
-                            <span class="card-price">$450/night</span>
-                            <button class="card-button">Book Now</button>
-                        </div>
-                    </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&auto=format&fit=crop" alt="New York">
+                <div class="destination-card-content">
+                    <h3>New York</h3>
+                    <p>United States</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Things to Do Section -->
-    <section id="things-to-do" class="section">
-        <div class="container">
-            <h2 class="section-header">Popular Activities</h2>
-            <div class="card-grid">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1543349689-9a4d426bee8e?w=800&auto=format&fit=crop" alt="Eiffel Tower">
-                    <div class="card-content">
-                        <h3>Eiffel Tower Skip-the-Line Tour</h3>
-                        <p>Paris, France</p>
-                        <p>Skip the line and enjoy panoramic views of Paris</p>
-                        <div style="margin-top: 15px">
-                            <span class="card-price">$45</span>
-                            <button class="card-button">Book Now</button>
-                        </div>
+    <section class="reviews container">
+        <h2>Traveler Reviews</h2>
+        <div class="review-grid">
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&auto=format&fit=crop" alt="Sarah" class="review-avatar">
+                    <div>
+                        <strong>Sarah Johnson</strong>
+                        <div class="review-stars">★★★★★</div>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?w=800&auto=format&fit=crop" alt="Monkey Forest">
-                    <div class="card-content">
-                        <h3>Sacred Monkey Forest</h3>
-                        <p>Ubud, Bali</p>
-                        <p>Explore ancient temples and meet playful monkeys</p>
-                        <div style="margin-top: 15px">
-                            <span class="card-price">$25</span>
-                            <button class="card-button">Book Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1517090186835-e348b621c9ca?w=800&auto=format&fit=crop" alt="Central Park">
-                    <div class="card-content">
-                        <h3>Central Park Bike Tour</h3>
-                        <p>New York, USA</p>
-                        <p>Guided bicycle tour through NYC's famous park</p>
-                        <div style="margin-top: 15px">
-                            <span class="card-price">$35</span>
-                            <button class="card-button">Book Now</button>
-                        </div>
-                    </div>
-                </div>
+                <p>"Amazing experience at the Eiffel Tower! The skip-the-line tour was worth every penny."</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Restaurants Section -->
-    <section id="restaurants" class="section">
-        <div class="container">
-            <h2 class="section-header">Featured Restaurants</h2>
-            <div class="card-grid">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=800&auto=format&fit=crop" alt="Le Petit Bistro">
-                    <div class="card-content">
-                        <h3>Le Petit Bistro</h3>
-                        <p>Paris, France</p>
-                        <p>Classic French cuisine in a romantic setting</p>
-                        <div style="margin-top: 15px">
-                            <span class="card-price">$$$$</span>
-                            <button class="card-button">Reserve</button>
-                        </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop" alt="Mike" class="review-avatar">
+                    <div>
+                        <strong>Mike Anderson</strong>
+                        <div class="review-stars">★★★★☆</div>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop" alt="Warung Organic">
-                    <div class="card-content">
-                        <h3>Warung Organic</h3>
-                        <p>Ubud, Bali</p>
-                        <p>Farm-to-table local dishes with rice field views</p>
-                        <div style="margin-top: 15px">
-                            <span class="card-price">$$</span>
-                            <button class="card-button">Reserve</button>
-                        </div>
+                <p>"The monkey forest was incredible! Our guide was very knowledgeable and friendly."</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&auto=format&fit=crop" alt="Emily" class="review-avatar">
+                    <div>
+                        <strong>Emily Chen</strong>
+                        <div class="review-stars">★★★★★</div>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&auto=format&fit=crop" alt="Manhattan Grill">
-                    <div class="card-content">
-                        <h3>Manhattan Grill</h3>
-                        <p>New York, USA</p>
-                        <p>Premium steaks and fine wine selection</p>
-                        <div style="margin-top: 15px">
-                            <span class="card-price">$$$</span>
-                            <button class="card-button">Reserve</button>
-                        </div>
-                    </div>
-                </div>
+                <p>"The bike tour through Central Park was the highlight of our NYC trip!"</p>
             </div>
         </div>
     </section>
@@ -562,47 +328,6 @@
     </footer>
 
     <script>
-        // Navigation functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('.nav-link');
-            const sections = document.querySelectorAll('.section');
-
-            function showSection(sectionId) {
-                sections.forEach(section => {
-                    section.classList.remove('active');
-                });
-                document.getElementById(sectionId).classList.add('active');
-            }
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    const sectionId = link.getAttribute('href').substring(1);
-                    showSection(sectionId);
-                });
-            });
-
-            // Handle direct navigation through URL hash
-            if (window.location.hash) {
-                const sectionId = window.location.hash.substring(1);
-                showSection(sectionId);
-            }
-
-            // Update hash on scroll (optional)
-            window.addEventListener('scroll', () => {
-                let currentSection = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (window.pageYOffset >= sectionTop - 60) {
-                        currentSection = section.getAttribute('id');
-                    }
-                });
-                if (currentSection !== '') {
-                    history.replaceState(null, null, `#${currentSection}`);
-                }
-            });
-        });
-
         // Search functionality
         const searchInput = document.querySelector('.search-input');
         const searchButton = document.querySelector('.search-button');
@@ -610,7 +335,7 @@
         searchButton.addEventListener('click', () => {
             const searchTerm = searchInput.value.trim();
             if (searchTerm) {
-                alert(`Searching for destinations in: ${searchTerm}`);
+                alert(Searching for destinations in: ${searchTerm});
                 searchInput.value = '';
             }
         });
